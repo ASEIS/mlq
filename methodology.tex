@@ -1,0 +1,25 @@
+
+\section{Methodology}
+
+The objective of this paper is to present and to articulate a method based on combination of machine learning and optimization process in order to narrow the search domain and customize solution for each station. Earthquakes are recorded in different stations; and our knowledge and understanding of seismic parameters are mostly based on these recorded data. In physics based ground motion simulation specially at low frequencies, peak ground velocity of S wave arrivals is the most common indicator of energy loss \citep[e.g., see][]{olsen2003estimation}. It is a common practice to include all stations results to develop the final model. However, in this study we show that, not all stations' results are accurate enough to be considered. Moreover, including other metrics can improve the optimization process. Each station, regarding its distance and azimuth from source of earthquake and its site characterization can provide accurate results at some velocity ranges. Therefore, using results from other velocity ranges can include inaccurate data into the final model. The proposed Q model is a function of shear wave velocity. Based on numerous simulation and optimization process, for each individual station, we compute the most possible range of shear wave velocity and extract data from the results of optimization for observation data. In the following, we discuss each of the ingredients of the method in full details.  We conclude this section with workflow of the method.\\
+
+\input{hercules}
+
+\input{q_model}
+
+\input{signal_metrics}
+
+\input{ANN}
+
+\input{GA}
+
+%%%%\input{time_frequency}
+
+\input{the_process}
+
+
+
+
+
+
+
