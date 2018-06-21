@@ -1,0 +1,15 @@
+\subsection{Attenuation models and ground motion simulations}
+We use a finite element code to conduct physics based ground motion simulation \citep[for more details see ][]{Tu_2006_Proc,Taborda_2010_Tech}. 
+In the code, energy loss due to anelasticity is represented by springs and dashpots. In this study, we use a model which combines two Maxwell elements and one Voigt element \citep{Bielak_2011_G}. The model converts the provided $Q$ value to desirable attenuation in the forward simulation. For the $Q$ equation we use the following equation: 
+
+\begin{equation}
+Q_{S}(V_{S}) = C + \alpha(V_{S})^{\beta}
+\end{equation}
+
+$C$ serves as floor value for low-velocity structures and $\alpha$ and $\beta$ offer different growth rates for increasing values of \vs{}. \qp{} depends on \qs{} and \qk{}, which is dilatational reciprocal quality factor. Since in soil and rock materials the intrinsic attenuation due to shear is generally much greater than that due to dilatation, we ignore dilatational reciprocal quality factor (\qk{}=~$\inf$). \qp{} is computed using
+
+\begin{equation}
+Q_{P}=2Q_{S}.
+\end{equation}
+
+Based on random combination of \qsvs{} relationship input parameters (i.e., $C$, $\alpha$, $\beta$) we run many physics-based ground motion simulation and generate the training dataset. 

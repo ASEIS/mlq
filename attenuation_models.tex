@@ -1,0 +1,18 @@
+\section{Attenuation Models}
+
+In physics-based ground motion simulation, $Q$ is considered as a user-defined value. Community velocity models ($CVMs$) used in simulations do not generally provide values of $Q$. Such a high resolution $Q$ model requires a rigorous inversion process. Therefore, the value of \qs{}, for instance, is usually defined based on rules that depend on the value of \vs{}. Typical forms of \qsvs{} relationships are (piecewise) linear or polynomial functions \citep[e.g.,][]{Brocher_2008_BSSA, Brocher_2005_Tech,Olsen_2003_BSSA, Graves_2008_BSSA,Taborda_2013_BSSA}. The value of \qp{} is mostly defined in terms of \qs{}, and, in some cases, also on the velocity contrast, $V_{P}/V_{S}$. Table~\ref{tab:QsVstable} shows a collection of different \qsvs{} and \qpqs{} relationships used in simulations and other related studies, including the earthquake or scenario event for which they were employed, and the simulation's minimum shear wave velocity (\vsmin{}) and maximum frequency (\fmax{}). Fig.~\ref{fig:Figure_q_models}  shows the \qs{} values with respect to \vs{} for each \qsvs{} relationship.  
+
+\input{table_qs}
+
+ \begin{figure}
+    \centering
+    \includegraphics[width=400 px]{figures/pdf/Figure_01.pdf}
+    \caption{Illustration of \qsvs{} relationships introduced in Table~\ref{tab:QsVstable}.}
+    \label{fig:Figure_q_models}
+\end{figure}
+
+This figure illustrates the significant differences between these models. There is no consensus on the most appropriate set of relationships between seismic velocities and quality factors. The relationship used by \citet{Taborda_2013_BSSA} was introduced as an attempt to capture some of the main features of other \qsvs{} rules. It is known that the relationships between \qs{} and \vs{}, and between \qp{} and \qs{} can be depth dependent (see, for instance, \citet{Olsen_2003_BSSA}, and the references therein) although \qs{} remains strongly correlated with \vs{}.  \citet{Hauksson_2006_JGR} also show that while \qs{} and \qp{} increase rapidly with depth consistent with the crustal structure, but argue that the ratios between \qs{} and \qp{} vary with depth and are different within and outside the major basins in southern California. They obtained values of \qsoqp$>1$ for most of the region but found a few limited areas, mostly outside the major sedimentary basins, where \qsoqp$< 1$. \citet{Song_2013_AGU} concluded that, in general, $Q_{S} \geq Q_{P}$, with $Q_{S} \approx Q_{P}$ near the surface $(z < 5 km)$ but $Q_{S} > Q_{P}$ at depth; and indicated that \qs{} seems to be in better agreement with the rule $Q_{S} = 50V_{S}$ at depth but not near the surface, where \qs{} is not linearly related to \vs{}. However, most of the simulations done recently (as seen in Table.~\ref{tab:QsVstable}) correspond to numerical models with maximum frequencies, \fmax{} $\leq1-2$~Hz, and minimum shear wave velocities, \vsmin{}$\geq300$~ m/s, where one can still assume $Q$ to be frequency independent. 
+
+
+
+
