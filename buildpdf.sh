@@ -1,15 +1,15 @@
-#!/bin/bash
 
-# run : ./buildpdf.sh main
+MAIN=$1
 
-pdflatex $1.tex
-bibtex   $1.aux
-pdflatex $1.tex
-pdflatex $1.tex
+pdflatex ${MAIN}.tex
+bibtex   ${MAIN}.aux
+pdflatex ${MAIN}.tex
+pdflatex ${MAIN}.tex
 
-open -a Adobe\ Acrobat\ Pro.app ${1}.pdf
+rm ${MAIN}.fff ${MAIN}.log ${MAIN}.aux ${MAIN}.ttt ${MAIN}.bbl ${MAIN}.lof ${MAIN}.blg ${MAIN}.spl ${MAIN}.out
 
-rm ${1}.fff ${1}.log ${1}.aux ${1}.ttt ${1}.bbl ${1}.lof ${1}.blg ${1}.spl ${1}.out
+mv ${MAIN}.pdf ${MAIN}.pdf
+
+open -a Adobe\ Acrobat.app ${MAIN}.pdf
 
 clear
-
